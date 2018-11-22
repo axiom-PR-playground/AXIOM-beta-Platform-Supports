@@ -1,0 +1,9 @@
+mkbootimage
+*.bif
+*.bin
+*.bit
+*.elf
+*.dtb
+*.o
+*.vim
+tags

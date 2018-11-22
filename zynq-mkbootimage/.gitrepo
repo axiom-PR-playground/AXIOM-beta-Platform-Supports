@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/antmicro/zynq-mkbootimage.git
+	branch = master
+	commit = e3796c3218417152c3d3bec1381aef169da084e3
+	parent = 4541aaf243104a9934a8cd446810b96e8a15df58
+	method = merge
+	update = auto
+	cmdver = 0.4.1
