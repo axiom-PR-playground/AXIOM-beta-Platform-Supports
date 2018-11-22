@@ -8,8 +8,6 @@ TARGETS=dist/u-boot.elf \
 		dist/devicetree.dts \
 		dist/BOOT.bin
 
-.PHONY: update-submodules
-
 all: $(TARGETS)
 	@echo "Done!"
 
@@ -23,7 +21,6 @@ dist/BOOT.bin: configs/boot.bif fsbl.elf
 
 dist/u-boot.elf: configs/u-boot.config
 	@echo "  MAKE dist/u-boot.elf"
-	@git submodule update --init u-boot-xlnx
 	@cp configs/u-boot.config u-boot-xlnx/.config
 	@make -C u-boot-xlnx olddefconfig
 	@make -C u-boot-xlnx u-boot.elf
@@ -31,7 +28,6 @@ dist/u-boot.elf: configs/u-boot.config
 
 zynq-mkbootimage/mkbootimage:
 	@echo "  MAKE dist/mkbootimage"
-	@git submodule update --init zynq-mkbootimage
 	@make -j $$(nproc) -C zynq-mkbootimage
 
 # Ubuntu package: device-tree-compiler, ArchLinux package: dtc
