@@ -1,0 +1,5 @@
+dist/*
+u-boot.elf
+
+### ArchLinuxPackages ###
+package/

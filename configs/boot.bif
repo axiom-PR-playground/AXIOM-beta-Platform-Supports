@@ -1,0 +1,4 @@
+image : {
+    [bootloader]fsbl.elf
+    u-boot-xlnx/u-boot.elf
+}
