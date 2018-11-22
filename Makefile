@@ -1,7 +1,3 @@
-# Set up environment variables if not present in shell env
-export ARCH?=arm
-export CROSS_COMPILE?=arm-linux-gnueabi-
-
 TARGETS=dist/u-boot.elf \
 		zynq-mkbootimage/mkbootimage \
 		dist/devicetree.dtb \
@@ -23,7 +19,7 @@ dist/u-boot.elf: configs/u-boot.config
 	@echo "  MAKE dist/u-boot.elf"
 	@cp configs/u-boot.config u-boot-xlnx/.config
 	@make -C u-boot-xlnx olddefconfig
-	@make -C u-boot-xlnx u-boot.elf
+	@make -j $$(nproc) -C u-boot-xlnx u-boot.elf
 	@cp u-boot-xlnx/u-boot.elf $@
 
 zynq-mkbootimage/mkbootimage:
