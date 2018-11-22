@@ -1,0 +1,13 @@
+; DO NOT EDIT (unless you know what you are doing)
+;
+; This subdirectory is a git "subrepo", and this file is maintained by the
+; git-subrepo command. See https://github.com/git-commands/git-subrepo#readme
+;
+[subrepo]
+	remote = https://github.com/Xilinx/u-boot-xlnx.git
+	branch = master
+	commit = d8fc4b3b70bccf1577dab69f6ddfd4ada9a93bac
+	parent = d6d21b9f9c532124868e72c43582fb9301e00bd1
+	method = merge
+	update = auto
+	cmdver = 0.4.1
