@@ -8,7 +8,7 @@ Unless your environment is set up for cross compilation, run `./build.sh` instea
 Done!
 
 ## Create a new release
-Publish to releases ./publish.sh -v ${VER_NUM} -t ${GITHUB_TOKEN} -r axiom-PR-playground/AXIOM-beta-Platform-Supports
+Publish to releases `./publish.sh -v ${VER_NUM} -t ${GITHUB_TOKEN} -r axiom-PR-playground/AXIOM-beta-Platform-Supports`
 
 # Management
 This repo is managed by [git subrepo](https://github.com/ingydotnet/git-subrepo) for simpler use.
