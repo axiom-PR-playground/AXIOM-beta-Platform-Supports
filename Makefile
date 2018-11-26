@@ -2,6 +2,7 @@ TARGETS=dist/u-boot.elf \
 		zynq-mkbootimage/mkbootimage \
 		dist/devicetree.dtb \
 		dist/devicetree.dts \
+		dist/uEnv.txt \
 		dist/BOOT.bin
 
 all: $(TARGETS)
@@ -31,6 +32,6 @@ dist/devicetree.dtb: configs/devicetree.dts
 	@echo "  MAKE dist/devicetree.dtb"
 	@dtc -I dts -O dtb -o $@ $<
 
-dist/devicetree.dts: configs/devicetree.dts
+dist/%: configs/%
 	@echo "  COPY $@"
 	@cp $< $@
